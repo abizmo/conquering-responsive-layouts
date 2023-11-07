@@ -81,6 +81,8 @@ header {
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex: 1;
 }
 
 .nav__list {
