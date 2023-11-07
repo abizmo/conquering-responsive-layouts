@@ -74,6 +74,10 @@ header {
   padding: 1em 0;
 }
 
+.primary-header {
+  display: flex;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
