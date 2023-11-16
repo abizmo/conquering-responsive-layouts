@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-neutral-100: #2e323f;
+  --clr-neutral-200: #3b4050;
+  --clr-neutral-500: #6f737f;
+  --clr-neutral-900: #ffffff;
+  --clr-accent-500: #a59678;
+
+  --ff-body: 'Montserrat', sans-serif;
+  --ff-heading: 'Oswald', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--clr-neutral-200);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-heading);
+  margin-top: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 75rem;
+
+  position: relative;
+}
+
+.primary-header {
+  background-color: var(--clr-neutral-100);
+  padding: 1em 0em;
+}
+
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.nav__list {
+  margin: 0 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--ff-heading);
+}
+
+.nav__list--secondary {
+  margin-top: 2em;
+}
+
+.nav__item {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.nav__link {
+  color: var(--clr-neutral-900);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link--button {
+  background-color: var(--clr-accent-500);
+  padding: 0.25em 1em;
+  border-radius: 4em;
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.nav-toggle:hover,
+.nav-toggle:focus {
+  opacity: 0.65;
+}
+
+.nav__link,
+.nav__togle {
+  transition: opacity 300ms ease;
+}
+
+.nav-toggle {
+  background-color: var(--clr-neutral-900);
+  width: 3em;
+  height: 3em;
+  padding: 0;
+  border: 0;
+  border-radius: 1000px;
+  cursor: pointer;
+
+  position: absolute;
+  right: 0;
+}
+
+.hamburger {
+  width: 50%;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background-color: var(--clr-neutral-100);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: ' ';
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
