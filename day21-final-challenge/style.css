@@ -8,6 +8,7 @@
   --clr-neutral-100: #2e323f;
   --clr-neutral-200: #3b4050;
   --clr-neutral-500: #6f737f;
+  --clr-neutral-586: #6f737f24;
   --clr-neutral-900: #ffffff;
   --clr-accent-500: #a59678;
 
@@ -33,6 +34,16 @@ h3,
 h4 {
   font-family: var(--ff-heading);
   margin-top: 0;
+  line-height: 1.1;
+}
+
+/* p {
+  margin: 0;
+} */
+
+section,
+footer {
+  padding: 5em 0;
 }
 
 .container {
@@ -91,12 +102,15 @@ h4 {
 .nav__link:hover,
 .nav__link:focus,
 .nav-toggle:hover,
-.nav-toggle:focus {
+.nav-toggle:focus,
+.btn:hover,
+.btn:focus {
   opacity: 0.65;
 }
 
 .nav__link,
-.nav__togle {
+.nav__togle,
+.btn {
   transition: opacity 300ms ease;
 }
 
@@ -138,4 +152,123 @@ h4 {
 
 .hamburger::after {
   transform: translateY(3px);
+}
+
+.hero {
+  background-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-900);
+  font-size: 1.5rem;
+}
+
+.hero__title {
+  font-size: 5.625rem;
+}
+
+.hero__title > b {
+  color: var(--clr-accent-500);
+}
+
+.hero__text {
+  opacity: 0.6;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  background-color: var(--clr-accent-500);
+  color: var(--clr-neutral-900);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: var(--ff-heading);
+  padding: 0.5em 1.5em;
+  border-radius: 100em;
+  display: inline-block;
+}
+
+.primary-section {
+  background-color: var(--clr-neutral-586);
+}
+
+.card {
+  text-align: center;
+  padding: 2em 0.7em;
+}
+
+.card--dark {
+  background-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-900);
+}
+
+.card--in-stack {
+  margin-bottom: 1em;
+}
+
+.card__title {
+  font-size: 1.875rem;
+}
+
+.card__title--accent {
+  color: var(--clr-accent-500);
+}
+
+.card__text {
+  margin-bottom: 0;
+}
+
+.card--dark .card__text {
+  opacity: 0.6;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  color: var(--clr-accent-500);
+}
+
+.section-text {
+  font-size: 1.3125rem;
+}
+
+.footer {
+  background-color: var(--clr-neutral-200);
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: var(--clr-neutral-900);
+  text-transform: lowercase;
+}
+
+.footer-subtitle {
+  margin-bottom: 1em;
+  font-size: 1.3125rem;
+  color: var(--clr-accent-500);
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: var(--clr-neutral-900);
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.about {
+  margin-bottom: 3em;
+}
+
+.secondary-nav__list {
+  margin: 0 0 3em;
+  padding: 0;
+  list-style: none;
+}
+
+.secondary-nav__item {
+  margin-bottom: 1em;
+}
+
+.secondary-nav__link:hover,
+.secondary-nav__link:focus {
+  color: var(--clr-accent-500);
+  opacity: 1;
 }
